@@ -24,7 +24,7 @@ services:
         restart : unless-stopped
         tty: true
         ports:
-            - "3306"
+            - "4306:3306"
         volumes:
             - ./mysql:/var/lib/mysql
         environment:
@@ -44,6 +44,6 @@ services:
         volumes:
             - ./src:/var/www/html
         ports:
-            - "9000:9000"
+            - "1000:1000"
         networks:
              - laravel
